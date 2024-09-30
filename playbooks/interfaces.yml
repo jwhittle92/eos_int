@@ -19,4 +19,4 @@
           ipv4:
             - address: "{{ item.ip }}"
     loop:
-    - "{{ interfaces }}"
+    - "{{ ip_interfaces }}"
