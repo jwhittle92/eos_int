@@ -13,5 +13,5 @@ local_asn: 65001
 
 
 bgp_neighbors:
-- { ip: 10.1.1.0, asn: 65101 }
-- { ip: 10.1.2.0, asn: 65101 }
+- { peer_ip: 10.1.1.0, asn: 65101 }
+- { peer_ip: 10.1.2.0, asn: 65101 }

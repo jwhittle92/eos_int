@@ -13,6 +13,6 @@
         redistribute:
           - protocol: "connected"
         neighbor:
-          - peer: "{{ item.peer }}"
+          - peer: "{{ item.peer_ip }}"
             remote_as: "{{ item.asn }}"
     loop: "{{ bgp_neighbors }}"
