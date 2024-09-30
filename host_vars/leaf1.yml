@@ -12,6 +12,6 @@ ip_interfaces:
 local_asn: 65001
 
 
-bgp_neigbors:
+bgp_neighbors:
 - { ip: 10.1.1.0, asn: 65101 }
 - { ip: 10.1.2.0, asn: 65101 }
