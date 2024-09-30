@@ -1,0 +1,22 @@
+---
+- name: Provision EOS interfaces
+  hosts: all
+  tasks:
+
+- name: Merge provided configuration with device configuration
+  arista.eos.eos_interfaces:
+    config:
+      - name: "{{ item }}"
+        enabled: true
+        mode: layer3
+  loop:
+  - "{{ l3_interfaces }}"
+
+  - name: Merge provided configuration with device configuration.
+    arista.eos.eos_l3_interfaces:
+      config:
+        - name: "{{ item.interface }}"
+          ipv4:
+            - address: "{{ item.ip }}"
+    loop:
+    - "{{ interfaces }}"

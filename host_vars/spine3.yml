@@ -1,0 +1,8 @@
+l3_interfaces:
+- ethernet5
+- ethernet6
+
+interfaces:
+- {interface: "ethernet5", ip: "10.3.3.0/31"}
+- {interface: "ethernet6", ip: "10.4.3.0/31"}
+- {interface: "loopback0", ip: "13.13.13.13/32"}
