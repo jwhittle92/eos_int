@@ -7,3 +7,11 @@ ip_interfaces:
 - { interface: "ethernet4", ip: "10.1.2.1/31" }
 - { interface: "loopback0", ip: "1.1.1.1/32" }
 - { interface: "loopback1", ip: "12.12.12.12/32" }
+
+
+local_asn: 65001
+
+
+bgp_neigbors:
+- { ip: 10.1.1.0, asn: 65101 }
+- { ip: 10.1.2.0, asn: 65101 }
