@@ -3,14 +3,14 @@
   hosts: all
   tasks:
 
-- name: Merge provided configuration with device configuration
-  arista.eos.eos_interfaces:
-    config:
-      - name: "{{ item }}"
-        enabled: true
-        mode: layer3
-  loop:
-  - "{{ l3_interfaces }}"
+  - name: Merge provided configuration with device configuration
+    arista.eos.eos_interfaces:
+      config:
+        - name: "{{ item }}"
+          enabled: true
+          mode: layer3
+    loop:
+    - "{{ l3_interfaces }}"
 
   - name: Merge provided configuration with device configuration.
     arista.eos.eos_l3_interfaces:
