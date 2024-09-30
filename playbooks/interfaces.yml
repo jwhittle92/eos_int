@@ -18,5 +18,4 @@
         - name: "{{ item.interface }}"
           ipv4:
             - address: "{{ item.ip }}"
-    loop:
-    - "{{ ip_interfaces }}"
+    loop: "{{ ip_interfaces }}"
