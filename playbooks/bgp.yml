@@ -4,6 +4,10 @@
   gather_facts: no
   tasks:
 
+  - name: enable IP routing
+    arista.eos.eos_command:
+      commands: ip routing
+
   - name: Merge provided configuration with device configuration
     arista.eos.eos_bgp_global:
       config:
