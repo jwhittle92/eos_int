@@ -1,6 +1,7 @@
 ---
 - name: Provision EOS interfaces
   hosts: all
+  gather_facts: no
   tasks:
 
   - name: Merge provided configuration with device configuration
