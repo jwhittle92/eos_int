@@ -8,7 +8,7 @@
     arista.eos.eos_config:
       lines: ip routing
 
-  - name: Merge provided configuration with device configuration
+  - name: Configure basic BGP peering
     arista.eos.eos_bgp_global:
       config:
         as_number: "{{ local_asn }}"
