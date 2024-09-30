@@ -5,14 +5,14 @@
   tasks:
 
   - name: Merge provided configuration with device configuration
-  arista.eos.eos_bgp_global:
-    config:
-      as_number: "{{ local_asn }}"
-      maximum_paths:
-        max_equal_cost_paths: 4
-      redistribute:
-        - protocol: "connected"
-      neighbor:
-        - peer: "{{ item.peer }}"
-          remote_as: "{{ item.asn }}"
-  loop: "{{ bgp_neighbors }}"
+    arista.eos.eos_bgp_global:
+      config:
+        as_number: "{{ local_asn }}"
+        maximum_paths:
+          max_equal_cost_paths: 4
+        redistribute:
+          - protocol: "connected"
+        neighbor:
+          - peer: "{{ item.peer }}"
+            remote_as: "{{ item.asn }}"
+    loop: "{{ bgp_neighbors }}"
