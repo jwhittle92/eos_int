@@ -6,3 +6,9 @@ ip_interfaces:
 - {interface: "ethernet3", ip: "10.1.2.0/31"}
 - {interface: "ethernet4", ip: "10.2.2.0/31"}
 - {interface: "loopback0", ip: "12.12.12.12/32"}
+
+local_asn: 65101
+
+bgp_neighbors:
+- { peer_ip: 10.1.2.1, asn: 65001 }
+- { peer_ip: 10.2.2.1, asn: 65002 }
