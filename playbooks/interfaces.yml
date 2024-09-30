@@ -10,8 +10,7 @@
         - name: "{{ item }}"
           enabled: true
           mode: layer3
-    loop:
-    - "{{ l3_interfaces }}"
+    loop: "{{ l3_interfaces }}"
 
   - name: Merge provided configuration with device configuration.
     arista.eos.eos_l3_interfaces:
