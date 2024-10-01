@@ -5,6 +5,8 @@ l3_interfaces:
 ip_interfaces:
 - {interface: "ethernet3", ip: "10.1.1.0/31"}
 - {interface: "ethernet4", ip: "10.2.1.0/31"}
+- {interface: "ethernet5", ip: "10.3.1.0/31"}
+- {interface: "ethernet6", ip: "10.4.1.0/31"}
 - {interface: "loopback0", ip: "11.11.11.11/32"}
 
 local_asn: 65101
@@ -12,3 +14,5 @@ local_asn: 65101
 bgp_neighbors:
 - { peer_ip: 10.1.1.1, asn: 65001 }
 - { peer_ip: 10.2.1.1, asn: 65002 }
+- { peer_ip: 10.3.1.1, asn: 65003 }
+- { peer_ip: 10.4.1.1, asn: 65004 }
