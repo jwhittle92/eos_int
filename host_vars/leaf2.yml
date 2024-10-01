@@ -1,6 +1,8 @@
 l3_interfaces:
 - ethernet3
 - ethernet4
+- ethernet5
+- ethernet6
 
 ip_interfaces:
 - { interface: "ethernet3", ip: "10.2.1.1/31" }

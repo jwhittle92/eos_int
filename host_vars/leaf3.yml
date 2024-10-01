@@ -1,4 +1,6 @@
 l3_interfaces:
+- ethernet3
+- ethernet4
 - ethernet5
 - ethernet6
 
