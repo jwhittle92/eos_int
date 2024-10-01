@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
 
-  - name: Merge provided configuration with device configuration
+  - name: Configure L3 Interfaces
     arista.eos.eos_interfaces:
       config:
         - name: "{{ item }}"
@@ -12,7 +12,7 @@
           mode: layer3
     loop: "{{ l3_interfaces }}"
 
-  - name: Merge provided configuration with device configuration.
+  - name: Assign IP addresses to L3 Interfaces
     arista.eos.eos_l3_interfaces:
       config:
         - name: "{{ item.interface }}"
