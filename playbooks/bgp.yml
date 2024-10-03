@@ -4,6 +4,17 @@
   gather_facts: no
   tasks:
 
+  - name: Get IP address of Loopback 0
+    arista.eos.eos_command:
+      commands:
+        - command: show ip interface loopback0
+          output: json
+    register: loopback0
+
+  - name: Print Loopback0 IP Address
+    ansible.builtin.debug: 
+      var: loopback0
+
   - name: enable IP routing
     arista.eos.eos_config:
       lines: ip routing
