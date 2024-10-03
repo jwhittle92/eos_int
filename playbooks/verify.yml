@@ -1,5 +1,5 @@
 ---
-- name: Verify ICMP reachability across hosts
+- name: Verify VXLAN EVPN state
   hosts: servers
   gather_facts: no
   tasks:
@@ -16,3 +16,13 @@
   - name: Print results of ping
     ansible.builtin.debug:
       var: ping
+  
+  - name: Check BGP EVPN tables
+    arista.eos.eos_command:
+      commands:
+        - command: "show bgp evpn"
+    register: bgp
+  
+  - name: Print BGP EVPN tables
+    ansible.builtin.debug:
+      var: bgp
