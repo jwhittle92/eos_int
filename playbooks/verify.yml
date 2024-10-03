@@ -15,14 +15,4 @@
 
   - name: Print results of ping
     ansible.builtin.debug:
-      var: ping
-  
-  - name: Check BGP EVPN tables
-    arista.eos.eos_command:
-      commands:
-        - command: "show bgp evpn"
-    register: bgp
-  
-  - name: Print BGP EVPN tables
-    ansible.builtin.debug:
-      var: bgp
+      var: ping.results[0].stdout_lines[0]
