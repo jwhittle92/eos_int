@@ -9,7 +9,7 @@ ip_interfaces:
 - { interface: "ethernet4", ip: "10.2.4.0/31" }
 - { interface: "ethernet5", ip: "10.3.4.0/31" }
 - { interface: "ethernet6", ip: "10.4.4.0/31" }
-- { interface: "loopback0", ip: "13.13.13.13/32" }
+- { interface: "loopback0", ip: "14.14.14.14/32" }
 
 local_asn: 65101
 
