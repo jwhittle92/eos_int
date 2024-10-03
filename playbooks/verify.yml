@@ -1,0 +1,18 @@
+---
+- name: Verify ICMP reachability across hosts
+  hosts: servers
+  gather_facts: no
+  tasks:
+
+  - name: Ping host IPs across VXLAN overlay
+    arista.eos.eos_command:
+      commands:
+        - command: "ping {{ item }}"
+          output: text
+    register: ping
+    loop:
+      "{{ host_ips }}"
+
+  - name: Print results of ping
+    ansible.builtin.debug:
+      var: ping
