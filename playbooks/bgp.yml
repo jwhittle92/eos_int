@@ -22,6 +22,8 @@
         router_id: "{{ loopback0.stdout[0].interfaces.Loopback0.interfaceAddress.primaryIp.address }}"
         maximum_paths:
           max_equal_cost_paths: 4
+        bgp_params:
+          log_neighbor_changes: true
         redistribute:
           - protocol: "connected"
         neighbor:
