@@ -1,6 +1,6 @@
 ---
 - name: Provision BGP
-  hosts: all
+  hosts: switches
   gather_facts: no
   tasks:
 
