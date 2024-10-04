@@ -1,6 +1,6 @@
 ---
 - name: Provision EOS interfaces
-  hosts: all
+  hosts: switches
   gather_facts: no
   tasks:
 
